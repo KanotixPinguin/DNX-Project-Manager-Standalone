@@ -65,3 +65,12 @@ sudo ./install.sh update
 sudo PM_URL="http://DEIN-SERVER:8094/" ./install-button.sh install
 ```
 
+---
+
+## Verbindungen im DNX-Ökosystem
+
+![DNX Gesamtarchitektur & Verbindungen](docs/dnx-architektur-verbindungen.png)
+![Datenflüsse: Spektrum, 3D-Hintergrund & Speicherung](docs/dnx-datenfluss-speicherung.png)
+
+* **Verbindung zu `DNX-Receiver-Account-Control` (`:8095/api/me`):** Die Rechte **`projects_view`**, **`project_upload`**, **`project_manage`** und **`downloads`** steuern Lese-, Upload- und Verwaltungszugriff konsistent zur zentralen Rollenverwaltung.
+* **Verbindung zum Receiver-Frontend:** Über `files/dnx_project_manager_button.js` fügt sich der frei verschiebbare Schnellbutton (`📦 Projekte / Downloads`) nahtlos in die DNX-Werkzeugleiste ein.
